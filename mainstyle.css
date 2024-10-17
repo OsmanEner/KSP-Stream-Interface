@@ -1,14 +1,8 @@
 
 /* Add font files for Oxanium */
 @font-face {
-  font-family: 'Oxanium';
-  src: url('fonts/oxanium.woff2') format('woff2'),
-       url('fonts/oxanium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-:root {
-  --font-family-oxanium: 'Oxanium', sans-serif;
+  font-family: OxaniumFont;
+  src: url(assets/main_assets/Oxanium-Bold.ttf)
 }
 
 
@@ -20,13 +14,13 @@
 }
 
 .flight {
+  font-family: OxaniumFont;
   position: absolute;
-  left: 5px;
+  left: -45px;
   top: 10px;
   width: 300px;
   height: 40px;
-  font-size: 24px;
-  font-family: var(--font-family-oxanium);
+  font-size: 15px;
   font-weight: bold;
   line-height: 40px;
   text-align: center;
@@ -34,17 +28,22 @@
 }
 
 .count {
+  font-family: OxaniumFont;
   position: absolute;
-  left: 62px;
-  top: 50px;
+  left: 10px;
+  top: 40px;
   width: 180px;
   height: 40px;
-  font-size: 48px;
-  font-family: var(--font-family-oxanium);
+  font-size: 25px;
   font-weight: bold;
   line-height: 40px;
   text-align: center;
   color: rgba(255, 255, 255, 1);
   background: transparent;
   border: transparent;
+}
+
+.blur {
+  width: 100%;
+  height: 100%;
 }
