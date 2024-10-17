@@ -19,30 +19,32 @@
   box-sizing: border-box;
 }
 
-.text-3 {
+.flight {
   position: absolute;
-  left: 65.73455810546875px;
-  top: 42.543243408203125px;
-  width: 263px;
+  left: 5px;
+  top: 10px;
+  width: 300px;
   height: 40px;
   font-size: 24px;
   font-family: var(--font-family-oxanium);
   font-weight: bold;
   line-height: 40px;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 1);
 }
 
-.text-4 {
+.count {
   position: absolute;
-  left: 112.73455810546875px;
-  top: 92.97723388671875px;
-  width: 169px;
+  left: 62px;
+  top: 50px;
+  width: 180px;
   height: 40px;
   font-size: 48px;
   font-family: var(--font-family-oxanium);
   font-weight: bold;
   line-height: 40px;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 1);
+  background: transparent;
+  border: transparent;
 }

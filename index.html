@@ -11,6 +11,9 @@
 
     <!--Website Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/main_assets/favicon.png">
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
 
   <style>
@@ -20,7 +23,59 @@
   </style>
 
   <body>
-    <p class="text-3">STARSHIP FLIGHT TEST</p>
-    <p class="text-4">T-00:00</p>
+    <p class="flight">STARSHIP FLIGHT TEST</p>
+    <button id="countID" class="count">T-00:00</button>
   </body>
+
+  <script>
+    let seconds = -60;
+    let clickStatus = false;
+    let timerId;
+    startTimer();
+    function updateTimer() {
+        seconds++;
+        if (seconds < 0) {
+            const absSeconds = Math.abs(seconds);
+            const minutes = Math.floor((absSeconds % 3600) / 60);
+            const remainingSeconds = absSeconds % 60;
+
+            const timeString = `T-${padZero(minutes)}:${padZero(remainingSeconds)}`;
+            $(".count").text(timeString);
+        }
+        else {
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const remainingSeconds = seconds % 60;
+            const timeString = `T+${padZero(minutes)}:${padZero(remainingSeconds)}`;
+            $(".count").text(timeString);
+        }
+    }
+
+    function padZero(num) {
+        num = Math.abs(num)
+        return num.toString().padStart(2, '0');
+    }
+
+    function startTimer() {
+        if (!timerId) {
+            timerId = setInterval(updateTimer, 1000);
+        }
+    }
+
+    function stopTimer() {
+        if (timerId) {
+            clearInterval(timerId);
+            timerId = null;
+        }
+    }
+
+    document.getElementById("countID").onclick = function() {
+        if (!clickStatus) {
+            stopTimer();
+            clickStatus = true; 
+        } else {
+            startTimer();
+            clickStatus = false; //
+        }
+    }
+  </script>
 </html>
