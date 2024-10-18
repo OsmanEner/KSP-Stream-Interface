@@ -25,9 +25,12 @@
   <body>
     <button id="reset10" class="reset1">reset</button>
     <button id="reset4" class="reset2">reset</button>
+    <button id="reset3" class="reset3">reset</button>
 
     <p class="flight">STARSHIP FLIGHT TEST</p>
     <button id="countID" class="count">T-00:00</button>
+
+    <img src="assets/main_assets/Blur.png" class="blur" id="blurID" style="display: none;">
   </body>
 
   <script>
@@ -79,13 +82,16 @@
       seconds = -42;
     }
 
-    document.getElementById("countID").onclick = function() {
+    document.getElementById("reset3").onclick = function() {
         if (!clickStatus) {
             stopTimer();
+            document.getElementById('blurID').style.display='block';
+            animationfunction();
             clickStatus = true; 
         } else {
             startTimer();
-            clickStatus = false; //
+            document.getElementById('blurID').style.display='none';
+            clickStatus = false; 
         }
     }
   </script>
