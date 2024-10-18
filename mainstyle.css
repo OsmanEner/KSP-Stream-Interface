@@ -16,7 +16,7 @@
 .flight {
   font-family: OxaniumFont;
   position: absolute;
-  left: -25px;
+  left: -20px;
   top: 10px;
   width: 300px;
   height: 40px;
@@ -30,7 +30,7 @@
 .count {
   font-family: OxaniumFont;
   position: absolute;
-  left: 34px;
+  left: 39px;
   top: 40px;
   width: 180px;
   height: 40px;
