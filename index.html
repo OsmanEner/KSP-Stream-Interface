@@ -30,7 +30,6 @@
     <p class="flight">STARSHIP FLIGHT TEST</p>
     <button id="countID" class="count">T-00:00</button>
 
-    <img src="assets/main_assets/Blur.png" class="blur" id="blurID" style="display: none;">
   </body>
 
   <script>
@@ -85,12 +84,9 @@
     document.getElementById("reset3").onclick = function() {
         if (!clickStatus) {
             stopTimer();
-            document.getElementById('blurID').style.display='block';
-            animationfunction();
             clickStatus = true; 
         } else {
             startTimer();
-            document.getElementById('blurID').style.display='none';
             clickStatus = false; 
         }
     }
