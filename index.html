@@ -23,6 +23,9 @@
   </style>
 
   <body>
+    <button id="reset10" class="reset1">reset</button>
+    <button id="reset4" class="reset2">reset</button>
+
     <p class="flight">STARSHIP FLIGHT TEST</p>
     <button id="countID" class="count">T-00:00</button>
   </body>
@@ -66,6 +69,14 @@
             clearInterval(timerId);
             timerId = null;
         }
+    }
+
+    document.getElementById("reset10").onclick = function() {
+      seconds = -602;
+    }
+
+    document.getElementById("reset4").onclick = function() {
+      seconds = -42;
     }
 
     document.getElementById("countID").onclick = function() {

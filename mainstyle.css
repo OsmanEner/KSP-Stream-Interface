@@ -24,7 +24,7 @@
   font-weight: bold;
   line-height: 40px;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 1);
 }
 
 .count {
@@ -38,9 +38,28 @@
   font-weight: bold;
   line-height: 40px;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 1);
   background: transparent;
   border: transparent;
+}
+
+.reset1 {
+  position: absolute;
+  bottom: 1px;
+  font-size: 300px;
+  color: transparent;
+  border: transparent;
+  background: transparent;
+}
+
+.reset2 {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  font-size: 300px;
+  color: transparent;
+  border: transparent;
+  background: transparent;
 }
 
 .blur {
